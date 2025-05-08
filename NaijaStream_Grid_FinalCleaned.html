@@ -1,0 +1,982 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NaijaStream Grid</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1c1c1c;
+      padding: 1em;
+    }
+    .logo {
+      color: deepskyblue;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .search-bar input {
+      padding: 0.5em;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+    .tags {
+      display: flex;
+      overflow-x: auto;
+      background: #1a1a1a;
+      padding: 0.5em 1em;
+      gap: 0.5em;
+    }
+    .tags span {
+      background: #333;
+      padding: 0.4em 0.8em;
+      border-radius: 16px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .tags span:hover {
+      background: deepskyblue;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1em;
+      padding: 1em;
+    }
+    .video-card {
+      background: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+    .video-info {
+      padding: 0.8em;
+    }
+    .video-info h4 {
+      margin: 0;
+      font-size: 1em;
+      color: #fff;
+    }
+    .video-info p {
+      margin: 0.3em 0;
+      font-size: 0.85em;
+      color: #ccc;
+    }
+    .video-info span {
+      font-size: 0.75em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">NaijaStream</div>
+    <div class="search-bar"><input type="text" placeholder="Search..."></div>
+  </header>
+
+  <div class="tags">
+    <span>All</span>
+    <span>Action</span>
+    <span>Nollywood</span>
+    <span>Afrobeats</span>
+    <span>Comedy</span>
+    <span>Music</span>
+    <span>Anime</span>
+    <span>Drama</span>
+  </div>
+
+  <div class="grid">
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=F5tSoaJ93ac" target="_blank">
+        <img src="https://img.youtube.com/vi/F5tSoaJ93ac/0.jpg" alt="Enemy - Imagine Dragons & JID">
+        <div class="video-info">
+          <h4>Enemy - Imagine Dragons & JID</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=6vnXqtN_iIs" target="_blank">
+        <img src="https://img.youtube.com/vi/6vnXqtN_iIs/0.jpg" alt="The Beekeeper">
+        <div class="video-info">
+          <h4>The Beekeeper</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=6BuWxJTtY1Q" target="_blank">
+        <img src="https://img.youtube.com/vi/6BuWxJTtY1Q/0.jpg" alt="Bleeding Soul">
+        <div class="video-info">
+          <h4>Bleeding Soul</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=FDZwyQjwnvA" target="_blank">
+        <img src="https://img.youtube.com/vi/FDZwyQjwnvA/0.jpg" alt="Bleeding Soul 2">
+        <div class="video-info">
+          <h4>Bleeding Soul 2</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=fjofywtft7c" target="_blank">
+        <img src="https://img.youtube.com/vi/fjofywtft7c/0.jpg" alt="A Long Time Coming">
+        <div class="video-info">
+          <h4>A Long Time Coming</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=UjZRwIPr0m4" target="_blank">
+        <img src="https://img.youtube.com/vi/UjZRwIPr0m4/0.jpg" alt="Drown in the Rain">
+        <div class="video-info">
+          <h4>Drown in the Rain</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=9bTpc5VCiqs" target="_blank">
+        <img src="https://img.youtube.com/vi/9bTpc5VCiqs/0.jpg" alt="Secrets of the Crown">
+        <div class="video-info">
+          <h4>Secrets of the Crown</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=3IpZzSgco28" target="_blank">
+        <img src="https://img.youtube.com/vi/3IpZzSgco28/0.jpg" alt="To Love a Prince">
+        <div class="video-info">
+          <h4>To Love a Prince</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=5Xcj2t3DzfI" target="_blank">
+        <img src="https://img.youtube.com/vi/5Xcj2t3DzfI/0.jpg" alt="Oil and Water">
+        <div class="video-info">
+          <h4>Oil and Water</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=YkP5SFMFaYY" target="_blank">
+        <img src="https://img.youtube.com/vi/YkP5SFMFaYY/0.jpg" alt="Love and Fate">
+        <div class="video-info">
+          <h4>Love and Fate</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=g6l7GJBXDZc" target="_blank">
+        <img src="https://img.youtube.com/vi/g6l7GJBXDZc/0.jpg" alt="Miss Independent">
+        <div class="video-info">
+          <h4>Miss Independent</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=OhAefewxC4o" target="_blank">
+        <img src="https://img.youtube.com/vi/OhAefewxC4o/0.jpg" alt="Avatar 2">
+        <div class="video-info">
+          <h4>Avatar 2</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=3klgsajPOgE" target="_blank">
+        <img src="https://img.youtube.com/vi/3klgsajPOgE/0.jpg" alt="Village Romance">
+        <div class="video-info">
+          <h4>Village Romance</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=WgGTjANDF1M" target="_blank">
+        <img src="https://img.youtube.com/vi/WgGTjANDF1M/0.jpg" alt="Omo Ghetto Reloaded">
+        <div class="video-info">
+          <h4>Omo Ghetto Reloaded</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=EKK9p_nQ-Bk" target="_blank">
+        <img src="https://img.youtube.com/vi/EKK9p_nQ-Bk/0.jpg" alt="The Crown Episode 1">
+        <div class="video-info">
+          <h4>The Crown Episode 1</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=5z8kcBJ8dGw" target="_blank">
+        <img src="https://img.youtube.com/vi/5z8kcBJ8dGw/0.jpg" alt="Break the Silence">
+        <div class="video-info">
+          <h4>Break the Silence</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=6miuHM1Lr3k" target="_blank">
+        <img src="https://img.youtube.com/vi/6miuHM1Lr3k/0.jpg" alt="The Voice Within">
+        <div class="video-info">
+          <h4>The Voice Within</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=Svbfy7wmCzc" target="_blank">
+        <img src="https://img.youtube.com/vi/Svbfy7wmCzc/0.jpg" alt="Jungle Fury">
+        <div class="video-info">
+          <h4>Jungle Fury</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=HUOd6aONWbs" target="_blank">
+        <img src="https://img.youtube.com/vi/HUOd6aONWbs/0.jpg" alt="The Kingdom Rises">
+        <div class="video-info">
+          <h4>The Kingdom Rises</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=FkshoPQZDd8" target="_blank">
+        <img src="https://img.youtube.com/vi/FkshoPQZDd8/0.jpg" alt="Faith & Fire">
+        <div class="video-info">
+          <h4>Faith & Fire</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=71UToH2UrSs" target="_blank">
+        <img src="https://img.youtube.com/vi/71UToH2UrSs/0.jpg" alt="Redemption Night">
+        <div class="video-info">
+          <h4>Redemption Night</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=3vqTCsWQTAs" target="_blank">
+        <img src="https://img.youtube.com/vi/3vqTCsWQTAs/0.jpg" alt="Zion Battle">
+        <div class="video-info">
+          <h4>Zion Battle</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Comedy">
+      <a href="https://www.youtube.com/watch?v=KICDaOupL4k" target="_blank">
+        <img src="https://img.youtube.com/vi/KICDaOupL4k/0.jpg" alt="Lagos Riddles">
+        <div class="video-info">
+          <h4>Lagos Riddles</h4>
+          <p>Comedy Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=1mszVUDKS3E" target="_blank">
+        <img src="https://img.youtube.com/vi/1mszVUDKS3E/0.jpg" alt="Silent Love">
+        <div class="video-info">
+          <h4>Silent Love</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=V_d2CrzhrjQ" target="_blank">
+        <img src="https://img.youtube.com/vi/V_d2CrzhrjQ/0.jpg" alt="Rise Again">
+        <div class="video-info">
+          <h4>Rise Again</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=uZ-_HIoEBE8" target="_blank">
+        <img src="https://img.youtube.com/vi/uZ-_HIoEBE8/0.jpg" alt="Obsession">
+        <div class="video-info">
+          <h4>Obsession</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Comedy">
+      <a href="https://www.youtube.com/watch?v=mZeQBdzi_wI" target="_blank">
+        <img src="https://img.youtube.com/vi/mZeQBdzi_wI/0.jpg" alt="Mortal Chains">
+        <div class="video-info">
+          <h4>Mortal Chains</h4>
+          <p>Comedy Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=wbC-xpLmKKs" target="_blank">
+        <img src="https://img.youtube.com/vi/wbC-xpLmKKs/0.jpg" alt="Desperate Faith">
+        <div class="video-info">
+          <h4>Desperate Faith</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=FCUk7rIBBAE" target="_blank">
+        <img src="https://img.youtube.com/vi/FCUk7rIBBAE/0.jpg" alt="Last Breath">
+        <div class="video-info">
+          <h4>Last Breath</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=EUYNnVgkAag" target="_blank">
+        <img src="https://img.youtube.com/vi/EUYNnVgkAag/0.jpg" alt="Eternal Legacy">
+        <div class="video-info">
+          <h4>Eternal Legacy</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=R4qud199tQk" target="_blank">
+        <img src="https://img.youtube.com/vi/R4qud199tQk/0.jpg" alt="Blood Sisters">
+        <div class="video-info">
+          <h4>Blood Sisters</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=Uyh0GTT16Qk" target="_blank">
+        <img src="https://img.youtube.com/vi/Uyh0GTT16Qk/0.jpg" alt="My Name is Hope">
+        <div class="video-info">
+          <h4>My Name is Hope</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Music">
+      <a href="https://www.youtube.com/watch?v=MLLm8Okhllg" target="_blank">
+        <img src="https://img.youtube.com/vi/MLLm8Okhllg/0.jpg" alt="Tears of Joy">
+        <div class="video-info">
+          <h4>Tears of Joy</h4>
+          <p>Music Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=ldwmSaJSNoM" target="_blank">
+        <img src="https://img.youtube.com/vi/ldwmSaJSNoM/0.jpg" alt="Black Rose">
+        <div class="video-info">
+          <h4>Black Rose</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=M8To7iorkxQ" target="_blank">
+        <img src="https://img.youtube.com/vi/M8To7iorkxQ/0.jpg" alt="Chains of Destiny">
+        <div class="video-info">
+          <h4>Chains of Destiny</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=zYqvcdiu-DE" target="_blank">
+        <img src="https://img.youtube.com/vi/zYqvcdiu-DE/0.jpg" alt="True Justice">
+        <div class="video-info">
+          <h4>True Justice</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="All">
+      <a href="https://www.youtube.com/watch?v=703iqitHkBs" target="_blank">
+        <img src="https://img.youtube.com/vi/703iqitHkBs/0.jpg" alt="Born Royal">
+        <div class="video-info">
+          <h4>Born Royal</h4>
+          <p>All Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=jBqDLfVkDQI" target="_blank">
+        <img src="https://img.youtube.com/vi/jBqDLfVkDQI/0.jpg" alt="Love & Thunder">
+        <div class="video-info">
+          <h4>Love & Thunder</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=rmhEcri71UQ" target="_blank">
+        <img src="https://img.youtube.com/vi/rmhEcri71UQ/0.jpg" alt="Romantic Vibes">
+        <div class="video-info">
+          <h4>Romantic Vibes</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=S_RY8CujgpI" target="_blank">
+        <img src="https://img.youtube.com/vi/S_RY8CujgpI/0.jpg" alt="Dance Battle Zone">
+        <div class="video-info">
+          <h4>Dance Battle Zone</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=bTkDPjAx_2o" target="_blank">
+        <img src="https://img.youtube.com/vi/bTkDPjAx_2o/0.jpg" alt="Echoes of Time">
+        <div class="video-info">
+          <h4>Echoes of Time</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=bfyvqrHd8Bc" target="_blank">
+        <img src="https://img.youtube.com/vi/bfyvqrHd8Bc/0.jpg" alt="Nigerian Kings">
+        <div class="video-info">
+          <h4>Nigerian Kings</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=qARrn7G067w" target="_blank">
+        <img src="https://img.youtube.com/vi/qARrn7G067w/0.jpg" alt="Village Saga">
+        <div class="video-info">
+          <h4>Village Saga</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Music">
+      <a href="https://www.youtube.com/watch?v=Qfjoz2zfzHA" target="_blank">
+        <img src="https://img.youtube.com/vi/Qfjoz2zfzHA/0.jpg" alt="Afro Anthem">
+        <div class="video-info">
+          <h4>Afro Anthem</h4>
+          <p>Music Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=HLnf2Hz7uNQ" target="_blank">
+        <img src="https://img.youtube.com/vi/HLnf2Hz7uNQ/0.jpg" alt="Street Hustle">
+        <div class="video-info">
+          <h4>Street Hustle</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=aEgWjvok3HY" target="_blank">
+        <img src="https://img.youtube.com/vi/aEgWjvok3HY/0.jpg" alt="Naija Series S1E1">
+        <div class="video-info">
+          <h4>Naija Series S1E1</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Faith">
+      <a href="https://www.youtube.com/watch?v=14Z-bHWNyiE" target="_blank">
+        <img src="https://img.youtube.com/vi/14Z-bHWNyiE/0.jpg" alt="Glory Reign">
+        <div class="video-info">
+          <h4>Glory Reign</h4>
+          <p>Faith Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=9SM0GM0hTW8" target="_blank">
+        <img src="https://img.youtube.com/vi/9SM0GM0hTW8/0.jpg" alt="Battle for Lagos">
+        <div class="video-info">
+          <h4>Battle for Lagos</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=EP4691tHjiM" target="_blank">
+        <img src="https://img.youtube.com/vi/EP4691tHjiM/0.jpg" alt="Afro Dance Party">
+        <div class="video-info">
+          <h4>Afro Dance Party</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=3mEiZOVkfjs" target="_blank">
+        <img src="https://img.youtube.com/vi/3mEiZOVkfjs/0.jpg" alt="Trapped in Time">
+        <div class="video-info">
+          <h4>Trapped in Time</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=-UBNfYYnCnE" target="_blank">
+        <img src="https://img.youtube.com/vi/-UBNfYYnCnE/0.jpg" alt="Black Dust">
+        <div class="video-info">
+          <h4>Black Dust</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Faith">
+      <a href="https://www.youtube.com/watch?v=pekzpzNCNDQ" target="_blank">
+        <img src="https://img.youtube.com/vi/pekzpzNCNDQ/0.jpg" alt="Echoes of Redemption">
+        <div class="video-info">
+          <h4>Echoes of Redemption</h4>
+          <p>Faith Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Faith">
+      <a href="https://www.youtube.com/watch?v=XUMqYJdBMy8" target="_blank">
+        <img src="https://img.youtube.com/vi/XUMqYJdBMy8/0.jpg" alt="Tears from Heaven">
+        <div class="video-info">
+          <h4>Tears from Heaven</h4>
+          <p>Faith Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=nStTSRdaZRI" target="_blank">
+        <img src="https://img.youtube.com/vi/nStTSRdaZRI/0.jpg" alt="Tribal Beats">
+        <div class="video-info">
+          <h4>Tribal Beats</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Music">
+      <a href="https://www.youtube.com/watch?v=WcIcVapfqXw" target="_blank">
+        <img src="https://img.youtube.com/vi/WcIcVapfqXw/0.jpg" alt="Believer">
+        <div class="video-info">
+          <h4>Believer</h4>
+          <p>Music Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=jeMYgIfNwD8" target="_blank">
+        <img src="https://img.youtube.com/vi/jeMYgIfNwD8/0.jpg" alt="Naija Love Story">
+        <div class="video-info">
+          <h4>Naija Love Story</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=_t0qtSKOpO4" target="_blank">
+        <img src="https://img.youtube.com/vi/_t0qtSKOpO4/0.jpg" alt="Sacrifice of Love">
+        <div class="video-info">
+          <h4>Sacrifice of Love</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=eYsldLTYyrM" target="_blank">
+        <img src="https://img.youtube.com/vi/eYsldLTYyrM/0.jpg" alt="Abuja Waves">
+        <div class="video-info">
+          <h4>Abuja Waves</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=22PZkwJpu9k" target="_blank">
+        <img src="https://img.youtube.com/vi/22PZkwJpu9k/0.jpg" alt="Naija High School">
+        <div class="video-info">
+          <h4>Naija High School</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=9yIbn2Vfgco" target="_blank">
+        <img src="https://img.youtube.com/vi/9yIbn2Vfgco/0.jpg" alt="Voice of the Street">
+        <div class="video-info">
+          <h4>Voice of the Street</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Faith">
+      <a href="https://www.youtube.com/watch?v=5qm8PH4xAss" target="_blank">
+        <img src="https://img.youtube.com/vi/5qm8PH4xAss/0.jpg" alt="Grace Encounter">
+        <div class="video-info">
+          <h4>Grace Encounter</h4>
+          <p>Faith Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Music">
+      <a href="https://www.youtube.com/watch?v=zP6eqCOM7tk" target="_blank">
+        <img src="https://img.youtube.com/vi/zP6eqCOM7tk/0.jpg" alt="Legendary Groove">
+        <div class="video-info">
+          <h4>Legendary Groove</h4>
+          <p>Music Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=Py9S2bD0RZQ" target="_blank">
+        <img src="https://img.youtube.com/vi/Py9S2bD0RZQ/0.jpg" alt="Kingdom Clash">
+        <div class="video-info">
+          <h4>Kingdom Clash</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Faith">
+      <a href="https://www.youtube.com/watch?v=BT_83vSP1es" target="_blank">
+        <img src="https://img.youtube.com/vi/BT_83vSP1es/0.jpg" alt="Broken Chains">
+        <div class="video-info">
+          <h4>Broken Chains</h4>
+          <p>Faith Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=q44VdjcsjPg" target="_blank">
+        <img src="https://img.youtube.com/vi/q44VdjcsjPg/0.jpg" alt="Obsession Reloaded">
+        <div class="video-info">
+          <h4>Obsession Reloaded</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=C7N56pZvilg" target="_blank">
+        <img src="https://img.youtube.com/vi/C7N56pZvilg/0.jpg" alt="The Inner Circle">
+        <div class="video-info">
+          <h4>The Inner Circle</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Nollywood">
+      <a href="https://www.youtube.com/watch?v=uXfchCYux4o" target="_blank">
+        <img src="https://img.youtube.com/vi/uXfchCYux4o/0.jpg" alt="Royal Bloodline">
+        <div class="video-info">
+          <h4>Royal Bloodline</h4>
+          <p>Nollywood Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=CumW3IY1mMg" target="_blank">
+        <img src="https://img.youtube.com/vi/CumW3IY1mMg/0.jpg" alt="Throne Room">
+        <div class="video-info">
+          <h4>Throne Room</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=dAqruZButUY" target="_blank">
+        <img src="https://img.youtube.com/vi/dAqruZButUY/0.jpg" alt="True Confessions">
+        <div class="video-info">
+          <h4>True Confessions</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Faith">
+      <a href="https://www.youtube.com/watch?v=sutwE1dQed0" target="_blank">
+        <img src="https://img.youtube.com/vi/sutwE1dQed0/0.jpg" alt="Heaven's Gate">
+        <div class="video-info">
+          <h4>Heaven's Gate</h4>
+          <p>Faith Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=zgsdXCW5Zw0" target="_blank">
+        <img src="https://img.youtube.com/vi/zgsdXCW5Zw0/0.jpg" alt="Deadly Sacrifice">
+        <div class="video-info">
+          <h4>Deadly Sacrifice</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Romance">
+      <a href="https://www.youtube.com/watch?v=zLxm0tagc80" target="_blank">
+        <img src="https://img.youtube.com/vi/zLxm0tagc80/0.jpg" alt="Love Reset">
+        <div class="video-info">
+          <h4>Love Reset</h4>
+          <p>Romance Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=k4bHaxLSTx8" target="_blank">
+        <img src="https://img.youtube.com/vi/k4bHaxLSTx8/0.jpg" alt="Rise of the Phoenix">
+        <div class="video-info">
+          <h4>Rise of the Phoenix</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Music">
+      <a href="https://www.youtube.com/watch?v=g6l7GJBXDZc" target="_blank">
+        <img src="https://img.youtube.com/vi/g6l7GJBXDZc/0.jpg" alt="Miss Independent (Extended)">
+        <div class="video-info">
+          <h4>Miss Independent (Extended)</h4>
+          <p>Music Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=i_YB-oiCyak" target="_blank">
+        <img src="https://img.youtube.com/vi/i_YB-oiCyak/0.jpg" alt="Echo of Her Voice">
+        <div class="video-info">
+          <h4>Echo of Her Voice</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Action">
+      <a href="https://www.youtube.com/watch?v=-dAF7FdXmUA" target="_blank">
+        <img src="https://img.youtube.com/vi/-dAF7FdXmUA/0.jpg" alt="Action Knights">
+        <div class="video-info">
+          <h4>Action Knights</h4>
+          <p>Action Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Drama">
+      <a href="https://www.youtube.com/watch?v=28cG_BGAhLU" target="_blank">
+        <img src="https://img.youtube.com/vi/28cG_BGAhLU/0.jpg" alt="Final Hour">
+        <div class="video-info">
+          <h4>Final Hour</h4>
+          <p>Drama Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+    <div class="video-card" data-category="Afrobeats">
+      <a href="https://www.youtube.com/watch?v=nvj15dO-Myk" target="_blank">
+        <img src="https://img.youtube.com/vi/nvj15dO-Myk/0.jpg" alt="Naija Riddim">
+        <div class="video-info">
+          <h4>Naija Riddim</h4>
+          <p>Afrobeats Stream</p>
+          <span>Now Streaming</span>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+
+<script>
+  const tagButtons = document.querySelectorAll(".tags span");
+  const cards = document.querySelectorAll(".video-card");
+
+  tagButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const category = button.textContent.trim();
+      cards.forEach(card => {
+        card.style.display = (category === "All" || card.dataset.category === category) ? "block" : "none";
+      });
+    });
+  });
+</script>
+</body>
+</html>
